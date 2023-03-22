@@ -27,7 +27,7 @@ CREATE TABLE employee
 ALTER TABLE employee AUTO_INCREMENT=101000;
 
 -- List all the tables in the current database
-SELECT * FROM employee, department;
+SHOW TABLES;
 
 -- Display the structure of the employee table
 DESC employee;
