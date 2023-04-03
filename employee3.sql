@@ -5,7 +5,7 @@ SELECT * FROM employee WHERE salary IN (SELECT MAX(salary) FROM employee);
 SELECT * FROM employee WHERE salary IN (SELECT MIN(salary) FROM employee);
 
 -- Display all the employees whose designation is same as that of 'Arun"
-SELECT * from employee WHERE designation IN (SELECT designation FROM employee WHERE emp_name='Arun');
+SELECT * FROM employee WHERE designation IN (SELECT designation FROM employee WHERE emp_name='Arun');
 
 -- Display the emp_no and name of employees who earn more than any employee in dept 1
 SELECT emp_no, emp_name FROM employee WHERE salary IN (SELECT MAX(salary) FROM employee WHERE dept_no=101);
