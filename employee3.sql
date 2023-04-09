@@ -8,7 +8,7 @@ SELECT * FROM employee WHERE salary IN (SELECT MIN(salary) FROM employee);
 SELECT * FROM employee WHERE designation IN (SELECT designation FROM employee WHERE emp_name='Arun');
 
 -- Display the emp_no and name of employees who earn more than any employee in dept 1
-SELECT emp_no, emp_name FROM employee WHERE salary IN (SELECT MAX(salary) FROM employee WHERE dept_no=101);
+SELECT emp_no, emp_name FROM employee WHERE salary > (SELECT MAX(salary) FROM employee WHERE dept_no=101);
 
 -- Display the empno, name, departments that the departments are same in both the emp and dept
 
