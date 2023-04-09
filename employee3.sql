@@ -1,5 +1,5 @@
 -- Display the emp_no, name, and salaries for employees whose average salary is higher than the salary of the organization
-SELECT * FROM employee WHERE salary IN (SELECT MAX(salary) FROM employee);
+SELECT * FROM employee WHERE salary > (SELECT AVG(salary) FROM employee);
 
 -- Display the details of employees whose salary is equal to the minimum salary of organisation.
 SELECT * FROM employee WHERE salary IN (SELECT MIN(salary) FROM employee);
